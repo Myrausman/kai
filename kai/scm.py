@@ -71,7 +71,4 @@ class GitDiff:
         # Get the patch for the file between the two commits
         patch = self.get_patch_for_file(old_commit, new_commit, file_path)
         # If patch is not None, it means a diff exists for the file
-        if patch is not None:
-            return True
-        else:
-            return False
+        return patch is not None
