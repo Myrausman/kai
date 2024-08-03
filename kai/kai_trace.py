@@ -16,9 +16,7 @@ def enabled_check(func):
     def wrapper(obj, *args, **kwargs):
         if obj.enabled:
             return func(obj, *args, **kwargs)
-        else:
-            # Perform as a noop (do nothing)
-            pass
+        return None
 
     return wrapper
 
